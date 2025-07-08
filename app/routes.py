@@ -4,7 +4,7 @@ from .services.deepseek_api import call_deepseek
 
 api = Blueprint("api", __name__)
 
-@api.route("/api/query", methods=["POST"])
+@api.route("/query", methods=["POST"])
 def query_models():
     data = request.get_json()
     prompt = data.get("prompt")
